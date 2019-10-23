@@ -38,7 +38,7 @@ export class ConnexionPage extends React.Component{
                         </div>
 
                         <div className="conexion">
-                            <button type="submit">Connexion</button>
+                        <button><Link to={"/Acceuil_logged"}> Connexion</Link></button>
                         </div>
 
                     </form>
@@ -46,7 +46,7 @@ export class ConnexionPage extends React.Component{
 
                 </div>
 
-                <button> <Link to={"/"}> Retour</Link></button>
+                <button><Link to={"/"}> Retour</Link></button>
 
             </div>
         )
