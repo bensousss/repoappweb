@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import logo from './logo.png';
 
 export class ProfilPage  extends React.Component {
 
@@ -7,6 +8,7 @@ export class ProfilPage  extends React.Component {
         return( 
             <div className="wrapper">
                 <div className="form-wrapper">
+                    <img src={logo} alt="logo"/>
                     <h1>Votre Profil</h1>
                     <div className="infosProfil">
                         <p>

@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './App.css';
+import logo from './logo.png';
 
 export class Transfert extends React.Component {
     
@@ -18,6 +19,7 @@ export class Transfert extends React.Component {
         return (
             <div className="wrapper">
                 <div className="form-wrapper">
+                    <img src={logo} alt="logo"/>
                     <h1>Transférer de l'argent vers un autre utilisateur</h1>
                     <p>
                         <label htmlFor="mail">Mail du destinataire : </label>

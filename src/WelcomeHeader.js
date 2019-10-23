@@ -1,7 +1,11 @@
 import React from 'react';
+import logo from './logo.png';
 
 export const WelcomeHeader = () =>{
     return (
-        <h1 style ={{textAlign:'center',marginTop:200}}> BIENVENUE DANS NOTRE APPLICATION DE PAIEMENT</h1>
+        <div className="header">
+            <img src={logo} alt="logo"/>
+            <h1 style ={{textAlign:'center',marginTop:50}}> BIENVENUE DANS NOTRE APPLICATION DE PAIEMENT : WATERMELON</h1>
+        </div>
     )
 }
