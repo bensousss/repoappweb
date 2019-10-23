@@ -12,7 +12,7 @@ export class Acceuil_logged  extends React.Component {
                     <p>Solde : XXXX€</p>
                 </div>
                 <div className="checkProfil">
-                <button><Link to={"/ProfilPage"}>Profil</Link></button>
+                    <button><Link to={"/ProfilPage"}>Profil</Link></button>
                 </div>
                 <div className="faireDepot">
                     <button type="submit">Dépôt</button>
@@ -21,7 +21,7 @@ export class Acceuil_logged  extends React.Component {
                     <button type="submit">Retrait</button>
                 </div>
                 <div className="faireTransfert">
-                    <button type="submit">Transfert</button>
+                <button><Link to={"/Transfert"}>Transfert</Link></button>
                 </div>
             </div>
         )

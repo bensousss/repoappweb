@@ -5,6 +5,7 @@ import {ConnexionPage} from './ConnexionPage';
 import {InscriptionPage} from './InscriptionPage';
 import {Acceuil_logged} from './Acceuil_logged';
 import {ProfilPage} from './ProfilPage';
+import { Transfert } from './Transfert';
 
 export class Roots extends React.Component{
 
@@ -17,6 +18,7 @@ export class Roots extends React.Component{
                     <Route path="/InscriptionPage" component ={InscriptionPage}/>
                     <Route path="/Acceuil_logged" component ={Acceuil_logged}/>
                     <Route path="/ProfilPage" component={ProfilPage}/>
+                    <Route path="/Transfert" component={Transfert}/>
                 </div>
             </Router>
         );
