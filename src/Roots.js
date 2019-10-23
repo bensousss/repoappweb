@@ -5,7 +5,8 @@ import {ConnexionPage} from './ConnexionPage';
 import {InscriptionPage} from './InscriptionPage';
 import {Acceuil_logged} from './Acceuil_logged';
 import {ProfilPage} from './ProfilPage';
-import { Transfert } from './Transfert';
+import {Transfert} from './Transfert';
+import {Dépôt} from './Dépôt';
 
 export class Roots extends React.Component{
 
@@ -19,6 +20,7 @@ export class Roots extends React.Component{
                     <Route path="/Acceuil_logged" component ={Acceuil_logged}/>
                     <Route path="/ProfilPage" component={ProfilPage}/>
                     <Route path="/Transfert" component={Transfert}/>
+                    <Route path="/Dépôt" component={Dépôt}/>
                 </div>
             </Router>
         );

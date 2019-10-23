@@ -17,7 +17,7 @@ export class Acceuil_logged  extends React.Component {
                     <button><Link to={"/ProfilPage"}>Profil</Link></button>
                 </div>
                 <div className="faireDepot">
-                    <button type="submit">Dépôt</button>
+                <button><Link to={"/Dépôt"}>Dépôt</Link></button>
                 </div>
                 <div classNam="faireRetrait">
                     <button type="submit">Retrait</button>

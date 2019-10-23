@@ -35,7 +35,7 @@ export class Transfert extends React.Component {
                     <p>
                         <label htmlFor="amount">Montant : </label>
                         <input
-                            type="text"
+                            type="number"
                             className=""
                             placeholder=""
                             name="amount"
