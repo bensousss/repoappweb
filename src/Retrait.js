@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import './App.css';
 import logo from './logo.png';
 
-export class Dépôt extends React.Component {
+export class Retrait extends React.Component {
     
     state =  {
         text: 'en attente'
@@ -20,7 +20,7 @@ export class Dépôt extends React.Component {
             <div className="wrapper">
                 <div className="form-wrapper">
                     <img src={logo} alt="logo"/>
-                    <h1>Faire un dépôt d'argent sur Watermelon</h1>
+                    <h1>Faire un retrait d'argent vers votre compte bancaire</h1>
                     <p>
                         Liste de vos cartes disponibles :
                     </p>
@@ -39,7 +39,7 @@ export class Dépôt extends React.Component {
                     </div>
                     <div className="amount">
                         <p> 
-                           <label htmlFor="mamount">Montant à créditer sur votre compte Watermelon : </label>
+                           <label htmlFor="mamount">Montant à créditer sur votre compte bancaire : </label>
                             <input
                                 type="number"
                                 className=""
@@ -51,13 +51,13 @@ export class Dépôt extends React.Component {
                         </p>
                     </div>
                     <p>
-                        <button type="submit" onClick={this.onClickButton}>Effectuer le dépôt</button>
+                        <button type="submit" onClick={this.onClickButton}>Effectuer le retrait</button>
                     </p>
                     <p>
                         <button><Link to={"/Acceuil_logged"}>Retour</Link></button>
                     </p>
                     <p>
-                        Etat du dépôt : <div className="App-bold">{this.state.text}</div>
+                        Etat du retrait : <div className="App-bold">{this.state.text}</div>
                     </p>
                 </div>
             </div>
