@@ -21,6 +21,21 @@ export class InscriptionPage extends React.Component{
         this.handleSubmit=this.handleSubmit.bind(this);
     }
 
+    store (){
+        var inputEmail= document.getElementById("email");
+        localStorage.setItem("email", inputEmail.value);
+
+        var inputfirstName= document.getElementById("firstName");
+        localStorage.setItem("firstName", inputfirstName.value);
+
+        var inputlastName= document.getElementById("lastName");
+        localStorage.setItem("lastName", inputlastName.value);
+
+        var inputpassword= document.getElementById("password");
+        localStorage.setItem("password", inputpassword.value);
+        
+    }
+
     handleSubmit = e => {
         e.preventDefault();
     }
@@ -34,6 +49,7 @@ export class InscriptionPage extends React.Component{
                         <div className="firstName">
                             <label htmlFor="firstName">Prénom</label>
                             <input
+                                id="firstName"
                                 type="text"
                                 className=""
                                 placeholder="First Name"
@@ -46,6 +62,7 @@ export class InscriptionPage extends React.Component{
                         <div className="lastName">
                             <label htmlFor="lastName">Nom</label>
                             <input
+                                id="lastName"
                                 type="text"
                                 className=""
                                 placeholder="Last Name"
@@ -58,6 +75,7 @@ export class InscriptionPage extends React.Component{
                         <div className="email">
                             <label htmlFor="email">e-mail</label>
                             <input
+                                id="email"
                                 type="text"
                                 className=""
                                 placeholder="email"
@@ -70,6 +88,7 @@ export class InscriptionPage extends React.Component{
                         <div className="password">
                             <label htmlFor="password">mot de passe</label>
                             <input
+                                id="password"
                                 type="text"
                                 className=""
                                 placeholder="password"
@@ -80,7 +99,7 @@ export class InscriptionPage extends React.Component{
                         </div>
 
                         <div className="createAccount">
-                            <button type="submit">Créer mon compte</button>
+                            <button type="submit" onClick={this.store}>Créer mon compte</button>
                         </div>
 
                     </form>
