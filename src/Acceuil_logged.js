@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 export class Acceuil_logged  extends React.Component {
 
@@ -11,7 +12,7 @@ export class Acceuil_logged  extends React.Component {
                     <p>Solde : XXXX€</p>
                 </div>
                 <div className="checkProfil">
-                    <button type="submit">Profil</button>
+                <button><Link to={"/ProfilPage"}>Profil</Link></button>
                 </div>
                 <div className="faireDepot">
                     <button type="submit">Dépôt</button>

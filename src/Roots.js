@@ -3,7 +3,8 @@ import {BrowserRouter as Router,Route} from "react-router-dom";
 import {Welcome} from './WelcomePage';
 import {ConnexionPage} from './ConnexionPage'; 
 import {InscriptionPage} from './InscriptionPage';
-import { Acceuil_logged } from './Acceuil_logged';
+import {Acceuil_logged} from './Acceuil_logged';
+import {ProfilPage} from './ProfilPage';
 
 export class Roots extends React.Component{
 
@@ -15,6 +16,7 @@ export class Roots extends React.Component{
                     <Route path="/ConnexionPage" component ={ConnexionPage}/>
                     <Route path="/InscriptionPage" component ={InscriptionPage}/>
                     <Route path="/Acceuil_logged" component ={Acceuil_logged}/>
+                    <Route path="/ProfilPage" component={ProfilPage}/>
                 </div>
             </Router>
         );
