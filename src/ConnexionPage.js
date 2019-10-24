@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import logo from './logo.png';
 
 
 export class ConnexionPage extends React.Component{
@@ -10,6 +11,7 @@ export class ConnexionPage extends React.Component{
         return (
             <div className="wrapper">
                 <div className="form-wrapper">
+                    <img src={logo} alt="logo"/>
                     <h1>Connexion à votre espace membre</h1>
                     <form onSubmit={this.handleSubmit} noValidate>
                         

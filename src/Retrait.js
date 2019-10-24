@@ -11,7 +11,7 @@ export class Retrait extends React.Component {
 
     onClickButton = () => {
         this.setState({
-          text: 'effectuée'
+          text: 'effectué'
         });
     }
 

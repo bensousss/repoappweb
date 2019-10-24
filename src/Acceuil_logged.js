@@ -25,6 +25,9 @@ export class Acceuil_logged  extends React.Component {
                 <div className="faireTransfert">
                     <button><Link to={"/Transfert"}>Transfert</Link></button>
                 </div>
+                <p>
+                    <button><Link to={"/"}>Se déconnecter</Link></button>
+                </p>
             </div>
         )
     }

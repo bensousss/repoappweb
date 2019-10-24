@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import logo from './logo.png';
 
 export class InscriptionPage extends React.Component{
 
@@ -29,6 +30,7 @@ export class InscriptionPage extends React.Component{
         return (
             <div className="wrapper">
                 <div className="form-wrapper">
+                    <img src={logo} alt="logo"/>
                     <h1>Création de votre compte</h1>
                     <form onSubmit={this.handleSubmit} noValidate>
                         <div className="firstName">
@@ -80,7 +82,7 @@ export class InscriptionPage extends React.Component{
                         </div>
 
                         <div className="createAccount">
-                            <button type="submit">Créer mon compte</button>
+                        <button> <Link to={"/Acceuil_logged"}>Créer mon compte</Link></button>
                         </div>
 
                     </form>
