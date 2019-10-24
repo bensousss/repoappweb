@@ -4,6 +4,8 @@ import {Welcome} from './WelcomePage';
 import {ConnexionPage} from './ConnexionPage'; 
 import {InscriptionPage} from './InscriptionPage';
 import { Acceuil_logged } from './Acceuil_logged';
+import {GestionUsersPageWrapper} from './GestionUsersPageWrapper';
+
 
 export class Roots extends React.Component{
 
@@ -15,6 +17,7 @@ export class Roots extends React.Component{
                     <Route path="/ConnexionPage" component ={ConnexionPage}/>
                     <Route path="/InscriptionPage" component ={InscriptionPage}/>
                     <Route path="/Acceuil_logged" component ={Acceuil_logged}/>
+                    <Route path="/GestionUsersPage" component ={GestionUsersPageWrapper}/>
                 </div>
             </Router>
         );

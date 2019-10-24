@@ -105,6 +105,7 @@ export class InscriptionPage extends React.Component{
                     </form>
                 </div>
                 <button> <Link to={"/"}> Retour</Link></button>
+
             </div>
         )
         
