@@ -21,7 +21,7 @@ export class ConnexionPage extends React.Component{
                                 placeholder="email"
                                 name="email"
                                 noValidate
-                                onChange={this.handleChange}
+                                onChange={this.props.onChangeSearch}
                                 />
                         </div>
 
@@ -33,7 +33,7 @@ export class ConnexionPage extends React.Component{
                                 placeholder="password"
                                 name="password"
                                 noValidate
-                                onChange={this.handleChange}
+                                
                                 />
                         </div>
 

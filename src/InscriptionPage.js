@@ -7,13 +7,13 @@ export class InscriptionPage extends React.Component{
         super(props);
 
         this.state={
-            search : 'level up '
+            search : ''
         }
     }
 
     updateSearch(event){
         this.setState({search:event.target.value})
-        console.log(this.state)
+        
     }
 
 

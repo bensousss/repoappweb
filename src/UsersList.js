@@ -5,18 +5,43 @@ import {User} from './User';
 
 export class UsersList extends React.Component{
 
+    constructor (props){
+        super(props);
+        this.state={
+            search : '',
+            users: props.users
+        }
+    }
+
+    updateSearch(event){
+        this.setState({search:event.target.value})
+        
+    }
+
     render(){
-        console.log(this.props.users);
+        
+        let filteredUsers = this.state.users.filter(
+            (user)=>{
+                return user.email.indexOf(this.state.search)!== -1;
+            }
+        ) 
+
         return(
-            <ul>
+            <div>
+                <ul>
                 
-                {this.props.users.map((user)=> {
-                    return <User user={user} key={user.id}/>
-                })}
+                    {filteredUsers.map((user)=> {
+                        return <User user={user} key={user.id}/>
+                    })}
                     
 
                 
-            </ul>
+                </ul>
+
+                <input type ="text" value={this.state.search} onChange ={this.updateSearch.bind(this)}/> 
+
+            </div>
+            
         );
     }
 
