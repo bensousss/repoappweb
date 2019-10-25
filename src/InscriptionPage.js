@@ -6,22 +6,19 @@ export class InscriptionPage extends React.Component{
     constructor(props){
         super(props);
 
-        this.state ={
-            firstName: null,
-            lastName: null,
-            email:null,
-            password:null,
-            formErrors:{
-                firstName:"",
-                lastName:"",
-                email:"",
-                password:""
-            }
+        this.state={
+            search : 'level up '
         }
-        this.handleSubmit=this.handleSubmit.bind(this);
     }
 
-    store (){
+    updateSearch(event){
+        this.setState({search:event.target.value})
+        console.log(this.state)
+    }
+
+
+
+    /*store (){
         var inputEmail= document.getElementById("email");
         localStorage.setItem("email", inputEmail.value);
 
@@ -34,11 +31,7 @@ export class InscriptionPage extends React.Component{
         var inputpassword= document.getElementById("password");
         localStorage.setItem("password", inputpassword.value);
         
-    }
-
-    handleSubmit = e => {
-        e.preventDefault();
-    }
+    }*/
 
     render(){
         return (
@@ -55,7 +48,8 @@ export class InscriptionPage extends React.Component{
                                 placeholder="First Name"
                                 name="firstName"
                                 noValidate
-                                onChange={this.handleChange}
+                                value = {this.state.search}
+                                onChange={this.updateSearch.bind(this)}
                                 />
                         </div>
 

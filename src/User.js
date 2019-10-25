@@ -7,8 +7,8 @@ export class User extends React.Component{
     render(){
         console.log(this.props.users);
         return(
-            <li>
-                {this.props.user.id} {this.props.user.firstName} {this.props.user.lastName} {this.props.user.email} {this.props.user.password} 
+            <li style ={{textAlign:"left"}}>
+                <br/>id : {this.props.user.id} <br/> firstName :  {this.props.user.firstName} <br/>lastName : {this.props.user.lastName} <br/> email : {this.props.user.email} <br/>password : {this.props.user.password} 
             </li>
         );
     }
