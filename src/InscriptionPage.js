@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+let users=[];
+
 export class InscriptionPage extends React.Component{
 
     constructor(props){
@@ -16,22 +18,29 @@ export class InscriptionPage extends React.Component{
         
     }
 
+    
+
+    storeUser(e){
+        e.preventDefault();
+        let user ={
+            id: Date.now(),
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            email: document.getElementById('email').value,
+            password: document.getElementById('password').value
+
+        }
+        users.push(user);
+        document.forms[0].reset();
+
+        console.warn('added', {user});
+
+        localStorage.setItem('myUserList', JSON.stringify(users));
 
 
-    /*store (){
-        var inputEmail= document.getElementById("email");
-        localStorage.setItem("email", inputEmail.value);
+    }
 
-        var inputfirstName= document.getElementById("firstName");
-        localStorage.setItem("firstName", inputfirstName.value);
 
-        var inputlastName= document.getElementById("lastName");
-        localStorage.setItem("lastName", inputlastName.value);
-
-        var inputpassword= document.getElementById("password");
-        localStorage.setItem("password", inputpassword.value);
-        
-    }*/
 
     render(){
         return (
@@ -93,7 +102,7 @@ export class InscriptionPage extends React.Component{
                         </div>
 
                         <div className="createAccount">
-                            <button type="submit" onClick={this.store}>Créer mon compte</button>
+                            <button id="btn" onClick={this.storeUser}>Créer mon compte</button>
                         </div>
 
                     </form>
