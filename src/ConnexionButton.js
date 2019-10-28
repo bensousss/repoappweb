@@ -14,8 +14,6 @@ const buttonStyle={
     height:80,
     marginTop:100,
     marginLeft:'33%'
-    
-
 }
 
 export class ConnexionButton extends React.Component{

@@ -13,7 +13,7 @@ export class Transfert extends React.Component {
         this.setState({
           text: 'effectuée'
         });
-      }
+    }
 
     render () {
         return (
