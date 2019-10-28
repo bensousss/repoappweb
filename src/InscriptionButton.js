@@ -20,7 +20,7 @@ export class InscriptionButton extends React.Component{
     render(){
 
         return (
-                <button style={buttonStyle}> <Link to={"/InscriptionPage"}> Inscription</Link></button>
+                <button> <Link to={"/InscriptionPage"}> Inscription</Link></button>
 
         )
     }

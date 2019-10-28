@@ -50,13 +50,16 @@ export class InscriptionPage extends React.Component{
 
         }
         users.push(user);
-        document.forms[0].reset();
 
         console.warn('added', {user});
 
         localStorage.setItem('myUserList', JSON.stringify(users));
+    }
 
-
+    compareUser(e){
+        e.preventDefault();
+        var comp = JSON.parse(localStorage.getItem('myUserList'))
+        console.log(comp);
     }
 
     render(){
@@ -120,6 +123,7 @@ export class InscriptionPage extends React.Component{
 
                         <div className="createAccount">
                         <button id="btn" onClick={this.storeUser}> <Link to={"/Acceuil_logged"}>Créer mon compte</Link></button>
+                        <button onClick={this.compareUser}>test</button>
                         </div>
 
                     </form>

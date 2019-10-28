@@ -2,8 +2,29 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import logo from './logo.png';
 
+let cards=[];
+var cardsList = localStorage.getItem('myCardList');
+
 export class ProfilPage  extends React.Component {
 
+    storeCard(e){
+        e.preventDefault();
+        let card ={
+            id: Date.now(),
+            last_4: document.getElementById('number').value,
+            brand: document.getElementById('brand').value,
+            date: document.getElementById('date').value,
+
+        }
+        cards.push(card);
+
+        console.warn('added', {card});
+
+        localStorage.setItem('myCardList', JSON.stringify(cards));
+
+
+    }
+    
     render () {
         return( 
             <div className="wrapper">
@@ -46,32 +67,72 @@ export class ProfilPage  extends React.Component {
                         </p>
                         <div className="cards">
                             <p>
-                                Liste de vos cartes disponibles :
+                                Liste de vos cartes disponibles : {cardsList}
                             </p>
                             <div className="addCard">
                                <p> 
-                                   <label htmlFor="addCard">Ajouter une carte de crédit (numéro) : </label>
+                                   <label htmlFor="addCard">Ajouter une carte de crédit (numéro) : </label><br/>
                                     <input
-                                       type="text"
-                                       className=""
-                                       placeholder="XXXX-XXXX-XXXX-XXXX"
-                                        name="addCard"
+                                        id="number"
+                                        type="number"
+                                        className=""
+                                        placeholder="XXXX"
+                                        name="number"
                                         noValidate
                                         onChange={this.handleChange}
                                     />
+                                    <input
+                                        id="brand"
+                                        type="text"
+                                        className=""
+                                        placeholder="Marque"
+                                        name="brand"
+                                        noValidate
+                                        onChange={this.handleChange}
+                                    />
+                                    <input
+                                        id="date"
+                                        type="date"
+                                        className=""
+                                        placeholder="??/??/??"
+                                        name="date"
+                                        noValidate
+                                        onChange={this.handleChange}
+                                    /><br/>
+                                    <button onClick={this.storeCard}>Ajouter</button>
                                 </p>
                             </div>
                             <div className="deleteCard">
                                 <p> 
-                                    <label htmlFor="deleteCard">Supprimer une carte de crédit (numéro) : </label>
+                                    <label htmlFor="deleteCard">Supprimer une carte de crédit (numéro) : </label><br/>
                                     <input
-                                        type="text"
+                                        id="number"
+                                        type="number"
                                         className=""
-                                        placeholder="XXXX-XXXX-XXXX-XXXX"
-                                        name="deleteCard"
+                                        placeholder="XXXX"
+                                        name="number"
                                         noValidate
                                         onChange={this.handleChange}
                                     />
+                                    <input
+                                        id="brand"
+                                        type="text"
+                                        className=""
+                                        placeholder="Marque"
+                                        name="brand"
+                                        noValidate
+                                        onChange={this.handleChange}
+                                    />
+                                    <input
+                                        id="date"
+                                        type="date"
+                                        className=""
+                                        placeholder="??/??/??"
+                                        name="date"
+                                        noValidate
+                                        onChange={this.handleChange}
+                                    /><br/>
+                                    <button>Supprimer</button>
                                 </p>
                             </div>
                         </div>

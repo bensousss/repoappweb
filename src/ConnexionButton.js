@@ -23,7 +23,7 @@ export class ConnexionButton extends React.Component{
 
         return (
                 
-                <button style={buttonStyle}><Link to={"/ConnexionPage"}>Connexion</Link></button> 
+                <button><Link to={"/ConnexionPage"}>Connexion</Link></button> 
             
         )
     }

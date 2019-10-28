@@ -10,8 +10,8 @@ export class Welcome extends React.Component{
         return (
             <div>
                
-                <WelcomeHeader/> 
-                <ConnexionButton/>
+                <WelcomeHeader/><br/>
+                <ConnexionButton/><br/><br/>
                 <InscriptionButton/>
                
             </div>

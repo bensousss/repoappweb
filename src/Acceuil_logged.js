@@ -2,7 +2,11 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import logo from './logo.png';
 
+var test = localStorage.getItem('myUserList');
+
 export class Acceuil_logged  extends React.Component {
+
+    
 
     render () {
         return( 
@@ -11,7 +15,8 @@ export class Acceuil_logged  extends React.Component {
                     <img src={logo} alt="logo"/>
                     <h1>Bienvenue sur Watermelon</h1>
                     <p>Que souhaitez-vous faire ?</p>
-                    <p>Solde : XXXX€</p>
+                    <p>Solde : 0€</p>
+                    <p>{test.firstName}</p>
                 </div>
                 <div className="checkProfil">
                     <button><Link to={"/ProfilPage"}>Profil</Link></button>
