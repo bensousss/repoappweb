@@ -5,7 +5,15 @@ import logo from './logo.png';
 
 export class ConnexionPage extends React.Component{
 
-    
+    state =  {
+        text: ' '
+    }
+
+    onClickButton = () => {
+        this.setState({
+          text: 'Erreur de connexion : vérifiez votre e-mail ou votre mot de pass'
+        });
+    }
 
     render(){
         return (
@@ -49,6 +57,10 @@ export class ConnexionPage extends React.Component{
                 </div>
 
                 <button><Link to={"/"}> Retour</Link></button>
+
+                <p>
+                    <div className="App-bold">{this.state.text}</div>
+                </p>
 
             </div>
         )

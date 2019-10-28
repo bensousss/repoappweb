@@ -26,6 +26,16 @@ export class InscriptionPage extends React.Component{
         e.preventDefault();
     }
 
+    state =  {
+        text: ' '
+    }
+
+    onClickButton = () => {
+        this.setState({
+          text: 'Erreur inscription : adresse mail déjà utilisée'
+        });
+    }
+
     render(){
         return (
             <div className="wrapper">
@@ -88,6 +98,9 @@ export class InscriptionPage extends React.Component{
                     </form>
                 </div>
                 <button> <Link to={"/"}> Retour</Link></button>
+                <p>
+                    <div className="App-bold">{this.state.text}</div>
+                </p>
             </div>
         )
         

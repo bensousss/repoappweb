@@ -1,5 +1,6 @@
 {
   "name": "applipaiement",
+  "author": "Martin DESCOTTES, Ethan BENSOUSSAN",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
