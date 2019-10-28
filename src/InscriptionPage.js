@@ -2,6 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import logo from './logo.png';
 
+let users = [];
+
 export class InscriptionPage extends React.Component{
 
     constructor(props){
@@ -22,6 +24,7 @@ export class InscriptionPage extends React.Component{
         this.handleSubmit=this.handleSubmit.bind(this);
     }
 
+
     handleSubmit = e => {
         e.preventDefault();
     }
@@ -36,6 +39,26 @@ export class InscriptionPage extends React.Component{
         });
     }
 
+    storeUser(e){
+        e.preventDefault();
+        let user ={
+            id: Date.now(),
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            email: document.getElementById('email').value,
+            password: document.getElementById('password').value
+
+        }
+        users.push(user);
+        document.forms[0].reset();
+
+        console.warn('added', {user});
+
+        localStorage.setItem('myUserList', JSON.stringify(users));
+
+
+    }
+
     render(){
         return (
             <div className="wrapper">
@@ -46,6 +69,7 @@ export class InscriptionPage extends React.Component{
                         <div className="firstName">
                             <label htmlFor="firstName">Prénom</label>
                             <input
+                                id="firstName"
                                 type="text"
                                 className=""
                                 placeholder="First Name"
@@ -58,6 +82,7 @@ export class InscriptionPage extends React.Component{
                         <div className="lastName">
                             <label htmlFor="lastName">Nom</label>
                             <input
+                                id="lastName"
                                 type="text"
                                 className=""
                                 placeholder="Last Name"
@@ -70,6 +95,7 @@ export class InscriptionPage extends React.Component{
                         <div className="email">
                             <label htmlFor="email">e-mail</label>
                             <input
+                                id="email"
                                 type="text"
                                 className=""
                                 placeholder="email"
@@ -82,6 +108,7 @@ export class InscriptionPage extends React.Component{
                         <div className="password">
                             <label htmlFor="password">mot de passe</label>
                             <input
+                                id="password"
                                 type="text"
                                 className=""
                                 placeholder="password"
@@ -92,7 +119,7 @@ export class InscriptionPage extends React.Component{
                         </div>
 
                         <div className="createAccount">
-                        <button> <Link to={"/Acceuil_logged"}>Créer mon compte</Link></button>
+                        <button id="btn" onClick={this.storeUser}> <Link to={"/Acceuil_logged"}>Créer mon compte</Link></button>
                         </div>
 
                     </form>

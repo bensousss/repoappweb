@@ -48,7 +48,7 @@ export class ConnexionPage extends React.Component{
                         </div>
 
                         <div className="conexion">
-                        <button><Link to={"/Acceuil_logged"}> Connexion</Link></button>
+                        <button><Link to={"/Acceuil_logged"}>Connexion</Link></button>
                         </div>
 
                     </form>

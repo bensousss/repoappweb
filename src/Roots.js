@@ -8,7 +8,6 @@ import {ProfilPage} from './ProfilPage';
 import {Dépôt} from './Dépôt';
 import {Retrait} from './Retrait';
 import {Transfert} from './Transfert';
-import {GestionUsersPageWrapper} from './GestionUsersPageWrapper';
 import {GestionWalletsPageWrapper} from './GestionWalletsPageWrapper';
 import {GestionCardsPageWrapper} from './GestionCardsPageWrapper';
 
@@ -27,7 +26,6 @@ export class Roots extends React.Component{
                     <Route path ="/Transfert" component ={Transfert} />
                     <Route path ="/Dépôt" component ={Dépôt} />
                     <Route path ="/Retrait" component ={Retrait}/>
-                    <Route path="/GestionUsersPage" component ={GestionUsersPageWrapper}/>
                     <Route path="/GestionWalletsPage" component ={GestionWalletsPageWrapper}/>
                     <Route path="/GestionCardsPage" component ={GestionCardsPageWrapper}/>
                 </div>
